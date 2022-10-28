@@ -1,0 +1,215 @@
+body{
+  background-color: hsl(233, 47%, 7%);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  justify-content: space-between;
+  max-width: 75%;
+  border-radius: .5rem;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  flex-direction: row-reverse;
+}
+
+.card .main-img-desktop{
+  width: 50%;
+  position: relative;
+}
+
+.card .main-img-mobile{
+  width: 100%;
+  height: 50%;
+}
+
+.card .main-img-desktop .desktop-img{
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.card .main-img-mobile{
+  display: none;
+  opacity: 0.6;
+  position: relative;
+}
+
+.card .main-img-desktop .overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277deg 99% 38%);
+}
+
+
+.card .content{
+  max-width: 35%;
+  padding: 40px 80px;
+  color: #fff;
+}
+
+.card .content h1{
+  margin-bottom: 25px;
+}
+
+.card .content h1 span{
+  color: hsl(277, 64%, 61%);
+}
+
+.card .content p{
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 25px;
+}
+
+.card .columns{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  margin-top: 50px;
+}
+
+.card .columns .col h3{
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.card .columns .col p{
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: .8rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media (max-width: 1115px) {
+  .card{
+    max-width: 87%;
+  }
+  .card:hover{
+    transform: scale(1.0);
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1075px) {
+  .card{
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 985px) {
+  .card{
+    max-width: 98%;
+  }
+}
+
+@media (max-width: 945px) {
+  .card{
+    max-width: 100%;
+    height: 65%;
+  }
+}
+
+@media (max-width: 945px){
+  .card{
+    height: 72%;
+  }
+  .card .columns{
+    margin: 0;
+  }
+}
+
+
+
+@media (max-width: 768px){
+  body{
+    overflow: auto;
+  }
+  .card{
+    display: block;
+    max-width: 45%;
+    height: 137vh;
+    text-align: center;
+  }
+  .card .main-img{
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+  .card .main-img .overlay{
+    left: 0;
+  }
+  .card .main-img img{
+    width: 100%;
+    height: 100%;
+  }
+  .card .main-img-desktop{
+    display: none;
+  }
+  .card .main-img-mobile{
+    display: block;
+    width: 100%;
+    height: 29%;
+    position: relative;
+    bottom: -110px;
+  }
+  .card .main-img-mobile .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277deg 99% 38%);
+    left: 0;
+  }
+  .card .main-img-mobile img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .card .content{
+    max-width: 90%;
+    padding: 20px;
+    margin-top: 100px;
+  }
+  .card .content .columns{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 765px){
+  .card{
+    max-width: 50%;
+  }
+}
+
+
+@media (max-width: 600px){
+  .card{
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 375px){
+  .card{
+    max-width: 90%;
+  }
+}
